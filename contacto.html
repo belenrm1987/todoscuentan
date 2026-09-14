@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Todos Cuentan</title>
+<meta name="description" content="Contacta con Todos Cuentan: comunicación, contenidos y SEO para entidades de discapacidad, diversidad e infancia con necesidades especiales.">
+<link rel="canonical" href="https://todoscuentan.org/contacto.html">
+<meta property="og:title" content="Contacto — Todos Cuentan">
+<meta property="og:description" content="Contacta con Todos Cuentan: comunicación, contenidos y SEO para entidades de discapacidad, diversidad e infancia con necesidades especiales.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://todoscuentan.org/contacto.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="logo-mark.png" alt="Todos Cuentan" width="28" height="28" style="vertical-align:middle;border-radius:6px;margin-right:8px;">Todos Cuentan</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="contacto contacto-standalone">
+  <div class="wrap">
+    <div>
+      <h1>Nos encantaría conocer vuestro proyecto</h1>
+      <p class="lead">Contadnos qué necesitáis comunicar y os proponemos cómo ayudar, sin compromiso.</p>
+    </div>
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+      <input type="hidden" name="form-name" value="contacto">
+      <p style="display:none;">
+        <label>No rellenar si eres humano: <input name="bot-field"></label>
+      </p>
+      <div>
+        <label for="nombre">Nombre y entidad</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Nombre y entidad" required>
+      </div>
+      <div>
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" placeholder="tucorreo@entidad.org" required>
+      </div>
+      <div>
+        <label for="mensaje">Cuéntanos brevemente vuestro proyecto</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Qué necesitáis comunicar..."></textarea>
+      </div>
+      <div class="privacy-check">
+        <input type="checkbox" id="privacidad" name="privacidad" required>
+        <label for="privacidad">He leído y acepto la <a href="#" id="privacy-link">política de privacidad</a></label>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <p style="font-size:16px; color:var(--gris);">O llámanos directamente al <strong style="color:var(--tinta);">671 96 07 35</strong></p>
+  </div>
+</section>
+
+<!-- Pop-up de política de privacidad -->
+<div id="privacy-modal" class="modal-overlay" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+    <button type="button" id="privacy-close" class="modal-close" aria-label="Cerrar">✕</button>
+    <h2 id="privacy-title">Política de privacidad</h2>
+    <div class="modal-body">
+      <p><strong>Responsable del tratamiento:</strong> Todos Cuentan, S.L.U.</p>
+      <p><strong>Finalidad:</strong> Gestionar las consultas y solicitudes de información que nos enviéis a través de este formulario, y responderos por el medio de contacto que nos facilitéis.</p>
+      <p><strong>Legitimación:</strong> El consentimiento que otorgáis al marcar la casilla de aceptación y enviar el formulario.</p>
+      <p><strong>Destinatarios:</strong> No se ceden datos a terceros, salvo obligación legal. Los datos del formulario se gestionan a través de Netlify (proveedor de hosting), que actúa como encargado del tratamiento.</p>
+      <p><strong>Conservación:</strong> Los datos se conservarán mientras sean necesarios para atender vuestra consulta, y no más tiempo del necesario para los fines para los que se recabaron.</p>
+      <p><strong>Derechos:</strong> Podéis ejercer vuestros derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a contacto@todoscuentan.org o llamando al 671 96 07 35.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Todos Cuentan — Comunicación accesible para un sector que ya lo es todo.
+  </div>
+</footer>
+
+<script>
+  const modal = document.getElementById('privacy-modal');
+  const openLink = document.getElementById('privacy-link');
+  const closeBtn = document.getElementById('privacy-close');
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    modal.hidden = false;
+    closeBtn.focus();
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    openLink.focus();
+  }
+
+  openLink.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+</script>
+<script src="cookie-banner.js"></script>
+
+</body>
+</html>
