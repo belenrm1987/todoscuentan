@@ -1,0 +1,21 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Tres personas juntas bajo un corazón</title>
+  <rect width="800" height="420" fill="#F4EFE6"/>
+  <ellipse cx="400" cy="372" rx="330" ry="24" fill="#E9E2D4"/>
+  <!-- corazon -->
+  <path d="M400 152 C400 108 340 100 340 148 C340 186 392 214 400 232 C408 214 460 186 460 148 C460 100 400 108 400 152 Z" fill="#E8A33D"/>
+  <!-- persona izquierda -->
+  <circle cx="290" cy="238" r="28" fill="#1F5A4A"/>
+  <rect x="250" y="276" width="80" height="92" rx="36" fill="#1F5A4A"/>
+  <!-- persona derecha -->
+  <circle cx="510" cy="238" r="28" fill="#3C6E9E"/>
+  <rect x="470" y="276" width="80" height="92" rx="36" fill="#3C6E9E"/>
+  <!-- persona central, mas pequena -->
+  <circle cx="400" cy="272" r="22" fill="#C4653F"/>
+  <rect x="368" y="302" width="64" height="66" rx="28" fill="#C4653F"/>
+  <!-- puntos decorativos -->
+  <circle cx="160" cy="150" r="8" fill="#3C6E9E" opacity="0.85"/>
+  <circle cx="135" cy="205" r="6" fill="#E8A33D" opacity="0.85"/>
+  <circle cx="660" cy="140" r="10" fill="#C4653F" opacity="0.85"/>
+  <circle cx="690" cy="205" r="6" fill="#1F5A4A" opacity="0.85"/>
+</svg>
